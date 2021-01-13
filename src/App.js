@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import ChoreItem from './ChoreItem';
+import Nav from './Nav';
+import Welcome from './Welcome';
+import AddChore from './AddChore';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+
+import './style.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Nav />
+      <div className="chore-list">
+        <Switch>
+          <Route path='/' exact component= {Welcome} />
+          <Route path='/about' component= {Welcome} />
+          <Route path='/item' component= {ChoreItem} />
+          <Route path='/add' component= {AddChore} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
