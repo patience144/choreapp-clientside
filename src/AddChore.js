@@ -17,7 +17,7 @@ export default function AddChore(props) {
                body: JSON.stringify(body)
            });
            props.history.goBack();
-        } catch (err) npm{
+        } catch (err) {
             console.error(err.message);
         }
     }
