@@ -11,15 +11,9 @@ export default function Nav() {
         <div className='nav'>
             <h1>Chore App</h1>
             <ul className='nav-list'>
-            <Link style={navStyle} to='/about'>
-                <li>About</li> 
-            </Link>
-            <Link style={navStyle} to='/item'>
-                <li>Chore List</li>
-            </Link>
-            <Link style={navStyle} to='/add'>
-                <li>Add Chores</li>
-            </Link>
+                <li><Link style={navStyle} to='/about'>About</Link></li>
+                <li><Link style={navStyle} to='/item'>Chore List</Link></li>
+                <li><Link style={navStyle} to='/add'>Add Chores</Link></li>
             </ul>
         </div>
     )
