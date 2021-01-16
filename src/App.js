@@ -19,12 +19,12 @@ class App extends React.Component {
   render() {
     return (
       <main className='App' >
-        <Nav />
         <BrowserRouter>
-        <Switch>
-          <Route path={'/'} exact component= {Welcome} />
-          <Route path={'/about'} component= {Welcome} />
-          <Route path={'/chores'} render= {() => 
+        <Nav />
+          <Switch>
+            <Route path={'/'} exact component= {Welcome} />
+            <Route path={'/about'} component= {Welcome} />
+            <Route path={'/chores'} render= {() => 
             <ChoreList chores={this.state.chores} />
           } />
           <Route path={'/add'} render= {() => 
